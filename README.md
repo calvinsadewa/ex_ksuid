@@ -1,5 +1,7 @@
 # ExKsuid
 
+[![Build Status](https://github.com/calvinsadewa/ex_ksuid/workflows/Elixir CI/badge.svg)](https://github.com/calvinsadewa/ex_ksuid/actions)
+
 Fully featured KSUID module in Elixir
 
 more information on https://github.com/segmentio/ksuid
