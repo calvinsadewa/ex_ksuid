@@ -12,7 +12,14 @@ defmodule ExKsuid.Base62 do
 
   @type t :: String.t()
 
-  @doc "Encode bytes into base62"
+  @doc """
+  Encode bytes into base62
+
+  ## Examples
+
+      iex> encode("Hello world!")
+      "T8dgcjRGuYUueWht"
+  """
   @spec encode(binary()) :: t
   def encode(bytes) when is_binary(bytes) do
     bytes
@@ -23,7 +30,14 @@ defmodule ExKsuid.Base62 do
     |> List.to_string()
   end
 
-  @doc "Decode base62 string to bytes"
+  @doc """
+  Decode base62 string to bytes
+
+  ## Examples
+
+      iex> decode("T8dgcjRGuYUueWht")
+      "Hello world!"
+  """
   @spec decode(t) :: binary()
   def decode(base62) when is_binary(base62) do
     base62

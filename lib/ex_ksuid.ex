@@ -101,8 +101,8 @@ defmodule ExKsuid do
 
   ## Examples
 
-  iex> ExKsuid.parse_raw(<<107611700::32>> <> Base.decode16!("9850EEEC191BF4FF26F99315CE43B0C8"))
-  %{timestamp: 1507611700, random_bytes: Base.decode16!("9850EEEC191BF4FF26F99315CE43B0C8")}
+    iex> ExKsuid.parse_raw(<<107611700::32>> <> Base.decode16!("9850EEEC191BF4FF26F99315CE43B0C8"))
+    %{timestamp: 1507611700, random_bytes: Base.decode16!("9850EEEC191BF4FF26F99315CE43B0C8")}
   """
   @spec parse_raw(raw_ksuid()) :: parse_result()
   def parse_raw(raw_ksuid) do

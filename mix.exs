@@ -11,10 +11,15 @@ defmodule ExKsuid.MixProject do
 
       # Docs
       name: "ExKsuid",
+      description: "Fully featured KSUID module in Elixir",
       source_url: "https://github.com/calvinsadewa/ex_ksuid",
-      homepage_url: "http://YOUR_PROJECT_HOMEPAGE",
+      homepage_url: "https://github.com/calvinsadewa/ex_ksuid",
+      package: [
+        licenses: ["Apache-2.0"],
+        links: %{"GitHub" => "https://github.com/calvinsadewa/ex_ksuid",},
+      ],
       docs: [
-        main: "ExKsuid", # The main page in the docs
+        main: "readme", # The main page in the docs
         extras: ["README.md"]
       ]
 
@@ -31,6 +36,7 @@ defmodule ExKsuid.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:stream_data, "~> 0.5", only: :test},
       {:ecto, "~> 3.0", optional: true}
       # {:dep_from_hexpm, "~> 0.3.0"},
