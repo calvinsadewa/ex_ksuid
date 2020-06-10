@@ -36,7 +36,7 @@ defmodule ExKsuidTest do
 
   property "Generated KSUID from earlier time lexicographically smaller than later time" do
     check all(int1 <- StreamData.positive_integer(), int2 <- StreamData.positive_integer()) do
-      ExKsuid.generate(timestamp: int1 + @epoch) <
+      assert ExKsuid.generate(timestamp: int1 + @epoch) <
         ExKsuid.generate(timestamp: int1 + int2 + @epoch)
     end
   end
