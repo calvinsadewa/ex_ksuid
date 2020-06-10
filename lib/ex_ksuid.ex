@@ -26,6 +26,9 @@ defmodule ExKsuid do
   @type raw_ksuid :: <<_::160>>
   @type random_payload :: <<_::128>>
 
+  @doc "Epoch used as timestamp lower limit at KSUID, 1400000000"
+  def epoch(), do: @epoch
+
   @doc """
   Generate a new KSUID in Base62 form,
   there is option to generate ksuid from existing timestamp
