@@ -14,8 +14,8 @@ defmodule ExKsuid.Base62Test do
 
   property "encode and decode binary data return same binary data" do
     check all(data <- StreamData.binary()) do
-      <<x>> = data
-      <<y>> = Base62.decode(Base62.encode(data))
+      x = :binary.decode_unsigned(data)
+      y = :binary.decode_unsigned(Base62.decode(Base62.encode(data)))
       assert x == y
     end
   end
